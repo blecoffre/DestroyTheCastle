@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "521072570303",
+    "firebase_url": "https://destroythecastle-c9ecc.firebaseio.com",
+    "project_id": "destroythecastle-c9ecc",
+    "storage_bucket": "destroythecastle-c9ecc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:521072570303:android:3316d5e12d7ea91580bb0a",
+        "android_client_info": {
+          "package_name": "com.DeathtreakStudio.DestroyTheCastle"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "521072570303-c2jb1b25g9mh26pu5ecul7dolngj91qn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAxslqYlZ96LnTB1vdjvrToYM5zHt1x3BY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "521072570303-c2jb1b25g9mh26pu5ecul7dolngj91qn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
