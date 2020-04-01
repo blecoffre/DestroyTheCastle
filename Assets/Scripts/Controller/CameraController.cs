@@ -4,11 +4,18 @@ namespace Controller
 {
     class CameraController : MonoBehaviour
     {
-        [SerializeField]
-        private float m_allowMoveDistFromBorder = 100.0f;
+        [SerializeField][Range(0,1)]
+        private float m_allowMoveDistFromBorderPercent = 0.15f;
+        private float m_allowedDistanceFromBorder = 0.0f;
         public float MoveSpeed = 10.0f;
         public float LeftXLimit = 0.0f;
         public float RightXLimit = 135.0f;
+
+        private void Start()
+        {
+            int width = Screen.width;
+            m_allowedDistanceFromBorder = width * m_allowMoveDistFromBorderPercent;
+        }
 
         private void Update()
         {
@@ -20,9 +27,9 @@ namespace Controller
 
         private Vector3 MoveDir()
         {
-            if (Input.mousePosition.x < m_allowMoveDistFromBorder)
+            if (Input.mousePosition.x < m_allowedDistanceFromBorder)
                 return Vector3.left;
-            else if (Input.mousePosition.x > (Screen.width - m_allowMoveDistFromBorder))
+            else if (Input.mousePosition.x > (Screen.width - m_allowedDistanceFromBorder))
                 return Vector3.right;
 
             return Vector3.zero;

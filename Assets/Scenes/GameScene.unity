@@ -534,8 +534,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b303344ea026d0448809058bec7443a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_allowMoveDistFromBorder: 100
-  MoveSpeed: 20
+  m_allowMoveDistFromBorderPercent: 0.15
+  MoveSpeed: 30
   LeftXLimit: 0
   RightXLimit: 100
 --- !u!1001 &236715472
