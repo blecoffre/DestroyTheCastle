@@ -11,6 +11,9 @@ public class AddressableAssetReferencesDB : ScriptableObject
 
     public AssetReference FindElementWithId(int id)
     {
+        Debug.Log(AssetReferences.Length);
+        Debug.Log(AssetReferences[0].assetReference == null);
+        Debug.Log(AssetReferences[1].assetReference == null);
         return AssetReferences.First(x => x.id == id).assetReference;
     }
 }
