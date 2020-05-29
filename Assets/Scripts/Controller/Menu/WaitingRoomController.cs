@@ -10,9 +10,9 @@ namespace Controller.Menu
     class WaitingRoomController : MonoBehaviourPunCallbacks
     {
         [SerializeField]
-        private int m_multiplayerSceneIndex = 0;
+        private string m_multiplayerSceneName = "GameScene";
         [SerializeField]
-        private int m_menuSceneIndex = 0;
+        private string m_menuSceneName = "Menu";
         [SerializeField]
         private int m_playerToStart = 0;
         [SerializeField]
@@ -40,14 +40,14 @@ namespace Controller.Menu
             if (PhotonNetwork.IsMasterClient && PhotonNetwork.PlayerList.Length == m_playerToStart)
             {
                 PhotonNetwork.CurrentRoom.IsOpen = false;
-                PhotonNetwork.LoadLevel(m_multiplayerSceneIndex);
+                PhotonNetwork.LoadLevel(m_multiplayerSceneName);
             }
         }
 
         public void DelayCancel()
         {
             PhotonNetwork.LeaveRoom();
-            SceneManager.LoadScene(m_menuSceneIndex);
+            SceneManager.LoadScene(m_menuSceneName);
         }
 
         private IEnumerator UpdateTimer()

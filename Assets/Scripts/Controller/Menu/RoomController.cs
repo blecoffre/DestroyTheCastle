@@ -7,7 +7,7 @@ namespace Controller.Menu
     class RoomController : MonoBehaviourPunCallbacks
     {
         [SerializeField]
-        private int m_waitingRoomSceneIndex = 0;
+        private string m_waitingRoomSceneName = "WaitingForOpponentScene";
 
         public override void OnEnable()
         {
@@ -21,7 +21,7 @@ namespace Controller.Menu
 
         public override void OnJoinedRoom()
         {
-            SceneManager.LoadScene(m_waitingRoomSceneIndex);
+            SceneManager.LoadScene(m_waitingRoomSceneName);
         }
     }
 }
